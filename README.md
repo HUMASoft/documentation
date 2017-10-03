@@ -6,3 +6,4 @@ All documents related with the project
  3. [interface](README/interface/README.md)
  4. [testing](README/testing/README.md)
  5. [notes](README/notes/README.md)
+ 6. [references](README/references/README.md)
