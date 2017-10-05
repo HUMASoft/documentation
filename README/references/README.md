@@ -3,7 +3,7 @@ REFERENCES
 
 DOCUMENTATION: CONTROL SYSTEM
 -----------------------------
-Considering, that the iPOS4808 MX is used to build the system’s embedded control from the supplier Technosoft, the following documentation was used: 
+Considering, that the [iPOS4808 MX](documentation/README/hardware/README.md) is used to build the system’s embedded control from the supplier Technosoft, the following documentation was used: 
 
 [**TECHNOSOFT S.A., iPOS4808 MX – Technical Reference, Switzerland, 2014**](documentation/ref/technosoft/P091.027.iPOS4808.MX.UM.pdf)
 
