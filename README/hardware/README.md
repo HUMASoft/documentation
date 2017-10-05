@@ -29,6 +29,9 @@ Provides power supply to the device iPOS4808, and consequently also to the motor
 
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
 [^1]: Servomechanism: is a servomotor with an ecnoder and an driver inside. This components form a closedloop circuit to control the position, velocity and torque.
 
 [^2]: DSP2 technology: (Digital signal processor 2) is a system based in a procesor or microprocesor that possess a group of instructions, an optimized hardware and software for applications that require numercial operations at very high speed. 
