@@ -32,13 +32,20 @@ Provides power supply to the device iPOS4808, and consequently also to the motor
 
 
 [^1]: Servomechanism: is a servomotor with an ecnoder and an driver inside. This components form a closedloop circuit to control the position, velocity and torque.
+
 [^2]: DSP2 technology: (Digital signal processor 2) is a system based in a procesor or microprocesor that possess a group of instructions, an optimized hardware and software for applications that require numercial operations at very high speed. 
 The drive can be implemented to control DC and AC (vector control [^3]) brushless motors, brushed DC motors and stepper motors. Additionally, the drive could be implemented with a power supply with shaft encoders (squared or sin/cos) and Hall linear signals.
+
 [^3]: Vector control: strategy that uses a variable-frequency inverter control method where two ortogonal compoenents (motor magnetic flux and torque), that can be visualized with a vector, represent the stator currents of a three-phase AC electric motor.
+
 [^4]: PLC (Programmable Logic Controller): a computer device used to automate electromechanic process. 
+
 [^5]: RS232 series: and interface that designates a standard for the exchange of serial binary data beetween a DTE (Data Termianl Equipment) and DCE (Data Communication Equipment. For example: a computer (DTE) and a modem (DCE).
+
 [^6]: CAN2.0B: The last extended version of the CAN specifications. CAN (Controller Area Network) is a communication protocol based in bus topology for the transmission of messages in distributed environments. 
+
 [^7]: EEPROM unit: a deivce with a card shape whcihc purpose is to store big amounts of data in small physical space. It allows reading and writing in multiple memory positions. 
+
 [^8]: TMLCAN: a protocol based on CAN2.0B which includes TLM instructions.
 
 
