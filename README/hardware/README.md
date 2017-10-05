@@ -28,11 +28,6 @@ Power Source
 Provides power supply to the device iPOS4808, and consequently also to the motor. 
 
 
-$~$
-
-$~$
-
-$~$
 
 [^1]: Servomechanism: is a servomotor with an ecnoder and an driver inside. This components form a closedloop circuit to control the position, velocity and torque.
 
