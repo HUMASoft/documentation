@@ -31,12 +31,12 @@ Provides power supply to the device iPOS4808, and consequently also to the motor
 
 In the following figure, a diagram of the conexions between the different elemenents which compose the system is depicted:
 
-![Diagram of the conections of the system's elements](Figura memoria David.jpg)
+![Diagram of the conections of the system's elements](Figura memoria David.jpg "Diagram of the conections of the system's elements")
 
 The CANbus card incorporated in the computer is connected to the iPOS4808 device through CAN. Moreover, the device is connected to the motor as a controller and power supplier.  Finally, this power is obtained from the power source that is used to feed the iPOS device.
 This system is implemented inside the robot TEO, from the Universidad Carlos III de Madrid and it is employed in the articulations’ motion, which is controlled by the iPOS.
 
-![Robot Teo](17-10-07 Foto teo (Roboticslab).jpg)
+![Robot Teo](17-10-07 Foto teo (Roboticslab).jpg "Robot TEO")
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
