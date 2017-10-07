@@ -1,7 +1,7 @@
 # documentation
 All documents related with the project
 
- 1. [introduction](README/introduction/README)
+ 1. [introduction](README/introduction/README.md)
  2. [requirements](README/requirements/README.md)
  3. [hardware](README/hardware/README.md)
  4. [interface](README/interface/README.md)
