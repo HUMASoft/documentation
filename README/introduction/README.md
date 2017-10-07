@@ -1,3 +1,43 @@
 
-HOLA
-====
+INTRODUCTION
+============
+
+DESIGN OF THE CONTROL LIBRARIES
+------------------------------
+A control library is necessary for the communications between the computer equipped with a CANbus card and iPOS408X device. This library allows the construction of a fractional-order control system (FOC)[^1] or an advanced control system (ACS)[^2], as well as introducing this type of control in robotic applications, specifically in the robot TEO available in the University Carlos III of Madrid. For the construction of the Soft Link Neck from the project HUMAsoft it is of great importance the developement of this library.
+
+The following information is related to the concepts introduced above:
+
+**CANbus**
+
+CAN (Controller Area Network) was developed by Bosch in 1985 for the vehicles network. Before the design of the protocol CAN, the suppliers of automobiles connected the electronic devices in the vehicles using point-to-point cabling systems. When replacing the cabling with communication networks in the vehicles, the cables’ cost was considerably reduced, as well as their complexity and weight. The automobile industry adopted rapidly CAN and, in 1993, it became the international standard, known as ISO 11898. Since 1994, many high-level protocols have been standardized from CAN, for example CANopen and DeviceNet, and its use has extended to other industries, away from the automobile industry. 
+
+The CAN protocol has different physical layers that can be used. In these physical layers, certain aspects of the network are classified, for instance the electric levels, the signals diagrams, the cables impedance, the maximum transmission rate, etc. The physical layers more common and widely employed are the following:
+ 
+  * **High Speed CAN:** is the most common physical layer. These types of CAN networks are implemented with two cables, and allow     communications with a transference rate up to 1 Mb/s. The typical devices inside this layer are, for example, anti-blockage system (ABS) brakes, motor’s control modules, or emissions systems.  
+  
+  * **Low Speed CAN Hardware:** these networks are also implemented with two cables. The devices can communicate at a rate of 125 kb/s, and have transceivers with of error tolerance capacities. Some examples of typical devices in automobiles that include this layer are the comfort devices or the brakes’ lights.
+  
+  * **CAN Hardware selection by software:** the CAN interfaces can be configurated through the software, and consequently, they can use any of the transceivers included.
+
+**CANbus: data structure**
+
+CAN devices, send data through the CANbus network in packages with a determined structure. These packages are formed by the following parts, as it can be observed in the figure.
+
+![CAN data structure](stdmsg_en.png "CAN data structure")
+
+  * **SOF:** the bit that determines the start of the message.
+  * **Arbitration field:** identifies the message and indicates its priority. This part can be standard (with 11 bits) or extended (with 29 bits).
+  * **RTR:** it can differentiate a remote frame from a data frame. A 0 RTR bit indicates a remote frame, while 
+  * **IDE:** allows the differentiation between an standard or extended Arbitation Field.
+  * **DLC:** indicates the number of data bytes that contains the data field.
+  * **Data:** contains between 0 to 8 data bytes that are going to be transmitted.
+  * **CRC:** is a 15 bit redundant cyclic revision code, having a recessive bit to delimitate it. This filed is used for error detection. 
+  * **ACK:** when a message is correctly received, the device sends an ACK bit at the end of the message. The sensor’s node checks the ACK bit, and if this last is not detected, the data is sent again. 
+  * **EOF:** indicates the end of the message.
+  
+**CANopen**
+
+CANopen is a high-level communication protocol, which is based in the CAN protocol introduced above. The protocol was developed, principally, for network applications integrated in vehicles. CANopen covers different fields,
+  
+  
