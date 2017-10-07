@@ -18,7 +18,7 @@ The CAN protocol has different physical layers that can be used. In these physic
   
   * **Low Speed CAN Hardware:** these networks are also implemented with two cables. The devices can communicate at a rate of 125 kb/s, and have transceivers with of error tolerance capacities. Some examples of typical devices in automobiles that include this layer are the comfort devices or the brakes’ lights.
   
-  * **CAN Hardware selection by software:** the CAN interfaces can be configurated through the software, and consequently, they can use any of the transceivers included.
+  * **CAN Hardware selection by software:** the CAN interfaces can be configurated through the software, and consequently, they can use any of the included transceivers.
 
 **CANbus: data structure**
 
@@ -38,6 +38,8 @@ CAN devices, send data through the CANbus network in packages with a determined 
   
 **CANopen**
 
-CANopen is a high-level communication protocol, which is based in the CAN protocol introduced above. The protocol was developed, principally, for network applications integrated in vehicles. CANopen covers different fields,
+CANopen is a high-level communication protocol, which is based in the CAN protocol introduced above. The protocol was developed, principally, for network applications integrated in vehicles. CANopen covers different fields including network programming, device description, interface definition or application profiles. Moreover, it provides a protocol that normalizes the communication between devices and applications from different suppliers. It is used in a wide range of industries, although it stands out in automatization applications.
+
+There are different levels inside these protocols, as it can be observed in the following picture. CAN covers the first two levels, which are the physical layer (it defines the lines used, the tensions, the nature of the high speed, etc.) and the data link layer. CANopen, on the other hand, cover five principal layers, which are the following: network layer (directioning
   
   
