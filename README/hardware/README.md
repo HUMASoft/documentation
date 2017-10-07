@@ -18,19 +18,28 @@ Computer equipped with CANBus
 The computer is connected to the iPOS device through CANBus, using a communication interface between the aforesaid computer and drive, being consequently a CANBus based protocol. The fractional control is designed in this computer to communicate with the iPOS, so that the the control of the motor is performed through the device. 
 
 
-Motor Maxon
+Maxon Motor
 ------------
-The Maxon motor is the mechanical actuator in charge for the movement of TEO's articulations. The motor receives the instructions from the iPOS4808 device and transform them into mechanical The iPOS itself does the control action over the motor, as well as it provides it with power supply.
+The Maxon Motor is the mechanical actuator in charge for the movement of TEO's articulations. The motor receives the instructions from the iPOS4808 device and transform them into mechanical The iPOS itself does the control action over the motor, as well as it provides it with power supply.
 
 
 Power Source
 ------------
 Provides power supply to the device iPOS4808, and consequently also to the motor. 
 
+----------------------------------------------------------------------------------------------------------------------------------------
 
+In the following figure, a diagram of the conexions between the different elemenents which compose the system is depicted:
 
+![Diagram of the conections of the system's elements](Figura memoria David.jpg)
+
+The CANbus card incorporated in the computer is connected to the iPOS4808 device through CAN. Moreover, the device is connected to the motor as a controller and power supplier.  Finally, this power is obtained from the power source that is used to feed the iPOS device.
+This system is implemented inside the robot TEO, from the Universidad Carlos III de Madrid and it is employed in the articulations’ motion, which is controlled by the iPOS.
+
+![Robot Teo](17-10-07 Foto teo (Roboticslab).jpg)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
+
 
 [^1]: Servomechanism: is a servomotor with an ecnoder and an driver inside. This components form a closedloop circuit to control the position, velocity and torque.
 
