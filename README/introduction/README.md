@@ -40,6 +40,37 @@ CAN devices, send data through the CANbus network in packages with a determined 
 
 CANopen is a high-level communication protocol, which is based in the CAN protocol introduced above. The protocol was developed, principally, for network applications integrated in vehicles. CANopen covers different fields including network programming, device description, interface definition or application profiles. Moreover, it provides a protocol that normalizes the communication between devices and applications from different suppliers. It is used in a wide range of industries, although it stands out in automatization applications.
 
-There are different levels inside these protocols, as it can be observed in the following picture. CAN covers the first two levels, which are the physical layer (it defines the lines used, the tensions, the nature of the high speed, etc.) and the data link layer. CANopen, on the other hand, cover five principal layers, which are the following: network layer (directioning
+There are different levels inside these protocols, as it can be observed in the following picture. CAN covers the first two levels, which are the physical layer (it defines the lines used, the stresses, the nature of the high speed, etc.) and the data link layer. CANopen, on the other hand, cover five principal layers, which are the following: network layer (addressing and routing), transport layer (reliability end to end), session layer, data presentation layer (structure of the data) an teh application layer (describes how to configure, transfer and synchronise the CANopen devices).
+
+![Different CAN and CANopen layers](layers de Canopen y can.png "Different CAN and CANopen layers")
+
+**CANopen: data structure**
+
+The format of the messages for a CANopen frame, is based in the format of the frame in CAN. In the CAN protocol, the data is transferred in frames that consist in a CAN-ID of 11 or 29 bits (standard or extended), control bits as the RTR, a starter bit and an “end of message” bit, a length of the message field, and the data (from 0 to 8 bytes). In CANopen, the ID is referred as COB-ID, and consist in a CAN-ID of 11 bits, divided in two parts: a function code of 4 bits and a Node-ID of 7 bits. The 7 bits size limitation also limits the number of devices that can be used in a CANopen network (concretively, it can only admit the usage of a maximum of 127 nodes). In the following figure it can be observed the structure of the data in the CANopen protocol.
+
+![Data structure in CANopen](Estructura datos canopen.png "Data strcuture in CANopen")
   
-  
+In the figure above it can be observed that the structure is quite similar to the one in the CAN protocol, which signifies that it is relatively simple to change between a protocol to another while designing the control library.
+
+**Control library designed**
+
+The library was used for the realization of many communication tests, although it was firstly needed to program a function that converted from CAN to CANopen, along with a function that performs the opposite action.
+
+With the purpose of reaching a better understanding of why is it necessary the design these two functions, a practical example is proposed, which can be observed in the next figure.
+
+![Practical example on message transmission](ejemplo practico transmision.png "Practical example on message transmission")
+
+As it can be observed in the figure above, there is a person that transmits the message, and another that receives the message. The sender desires to communicate an object (in this case a table). The message "table" is inside of the language label, which signifies that both persons speak the same language.
+
+In the figure, a line links both persons, which represents the channel in which the message is transmitted (in the example, the message is sent by email) being this channel equivalent to CANbus. Before transmitting the message, the sender knows the content the message, as well as the language that is needed (which is equivalent to the CANopen layer), although the message is not sent yet. Once the sender writes the word "table" in the computer and sends it by email and the other person receives it, the environment is the CANbus layer.
+
+Continuing with example, the sender, before sending the word by email, had to translate the word from his mind to the computer (write the words in a proper order, etc.), thus being equivalent to the function designed that converts the CANbus data to CANopen (some CANbus data messages are received and in order to understand them a transformation to CANopen is needed).
+
+Translating this example to a more technical language, the function that transforms the CANopen data to CANbus is used to transmit the message in a proper way. When the iPOS receives the message, it uses the function that converts form CANbus to CANopen to be able to understand the message. In the case that the iPOS device realizes an answer, the opposite process would be performed, and message would travel to the opposite end.
+
+Once both functions are performed, different messages in CANopen were built and snet form the computer to the iPOS device to check the functioning of the communication, as well as to verify that the answer was the expected.
+
+
+
+
+
