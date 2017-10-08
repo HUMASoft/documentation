@@ -4,7 +4,7 @@ INTRODUCTION
 
 DESIGN OF THE CONTROL LIBRARIES
 ------------------------------
-A control library is necessary for the communications between the computer equipped with a CANbus card and iPOS408X device. This library allows the construction of a fractional-order control system (FOC)[^1] or an advanced control system (ACS)[^2], as well as introducing this type of control in robotic applications, specifically in the robot TEO available in the University Carlos III of Madrid. For the construction of the Soft Link Neck from the project HUMAsoft it is of great importance the developement of this library.
+A control library is necessary for the communications between the computer equipped with a CANbus card and iPOS408X device. This library allows the construction of a fractional-order control system (FOC) or an advanced control system (ACS)[^1], as well as introducing this type of control in robotic applications, specifically in the robot TEO available in the University Carlos III of Madrid. For the construction of the Soft Link Neck from the project HUMAsoft it is of great importance the developement of this library.
 
 The following information is related to the concepts introduced above:
 
@@ -71,6 +71,10 @@ Translating this example to a more technical language, the function that transfo
 Once both functions are performed, different messages in CANopen were built and sent from the computer to the iPOS device to check the functioning of the communication, as well as to verify that the answer was the expected.
 
 
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+[^1]: **Advanced control systems (ACS) and Fractional-order Control (FOC), and their aplications in robotics:** The robotic systems present a high complexity as they are multivariable, nonlinear systems, have a high number of interaction between links, etc. These characteristics increase the difficulty while implementing classic control strategies, due to the requirement of a linear model of the system for the controller design. The robot controllers are therefore adjusted heuristically for some operation conditions, where no external perturbations or parametric uncertainties that in fact affect the functioning of the robotic system are taken into account. Due to the problems that face the classic controllers, the use of FOC in the robotic systems is a subject of investigation that has increased its importance in the latest years, as they provide a sturdiness face to the external perturbations or parametric uncertainties of the robot's model. This type of controllers has been used, for example, in visual control, in robotic manipulators, in bird control system, in speed control or in the position y collaborative robots, etc. Therefore, the applications of this type of control are very wide, and reaches an advances control design that solves the principal problems obtained with the classical control. It is then considered a highly recommended type of control for a system with such complexity as the TEO robot.
 
 
 
