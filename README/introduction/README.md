@@ -68,7 +68,7 @@ Continuing with example, the sender, before sending the word by email, had to tr
 
 Translating this example to a more technical language, the function that transforms the CANopen data to CANbus is used to transmit the message in a proper way. When the iPOS receives the message, it uses the function that converts form CANbus to CANopen to be able to understand the message. In the case that the iPOS device realizes an answer, the opposite process would be performed, and message would travel to the opposite end.
 
-Once both functions are performed, different messages in CANopen were built and snet form the computer to the iPOS device to check the functioning of the communication, as well as to verify that the answer was the expected.
+Once both functions are performed, different messages in CANopen were built and sent from the computer to the iPOS device to check the functioning of the communication, as well as to verify that the answer was the expected.
 
 
 
