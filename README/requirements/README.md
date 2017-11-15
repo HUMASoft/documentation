@@ -6,6 +6,7 @@ device cia 402
 --------------
 
 must be able to:
+ - set control mode
  - set speed
  - get speed
  - set position
