@@ -6,18 +6,18 @@ device cia 402
 --------------
 
 must be able to:
- - set control mode
- - set speed
- - get speed
- - set position
- - get position
- - set torque
- - get torque
- - check status
- - init
- - stop
- - display errors
- - react to errors
+ - set control mode Done->Revision
+ - set speed ToDo
+ - get speed ToDo
+ - set position Done->Revision
+ - get position Done-Revision
+ - set torque ToDo
+ - get torque ToDo
+ - check status Done->Revision
+ - init Done->Revision
+ - stop Done->Revision
+ - display errors ToDo
+ - react to errors ToDo
 
 
 robot
