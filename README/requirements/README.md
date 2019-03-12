@@ -37,8 +37,3 @@ must be able to:
  - set torque from min to max
  - have different callback controllers
 
-ciaIcan
--------
-must be able to:
-  - convert cia402 msg from cia devices to can msg
-  - send canmsg trough canbus device
